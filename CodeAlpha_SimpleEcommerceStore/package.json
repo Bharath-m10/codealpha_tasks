@@ -1,0 +1,13 @@
+{
+  "name": "codealpha-simple-ecommerce-store",
+  "version": "1.0.0",
+  "description": "Simple E-commerce Store for CodeAlpha Internship Task 1",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  }
+}

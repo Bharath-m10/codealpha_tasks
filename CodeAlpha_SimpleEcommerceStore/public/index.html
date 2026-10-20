@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopSphere - CodeAlpha E-Commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">ShopSphere</div>
+    <div class="nav-right">
+      <span id="userStatus">Not logged in</span>
+      <button id="authBtn" onclick="toggleAuthModal()">Login / Register</button>
+      <button id="cartBtn" onclick="toggleCartModal()">Cart (<span id="cartCount">0</span>)</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="banner">
+      <h2>Featured Products</h2>
+      <p>Browse our tech electronics store built with Express & Vanilla JS</p>
+    </section>
+
+    <div class="product-grid" id="productGrid">
+      <!-- Loaded dynamically -->
+    </div>
+  </main>
+
+  <!-- Product Details Modal -->
+  <div id="detailsModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeDetailsModal()">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="toggleCartModal()">&times;</span>
+      <h3>Shopping Cart</h3>
+      <div id="cartItemsList"></div>
+      <div class="cart-total" id="cartTotal">Total: ₹0</div>
+      <button class="primary-btn" onclick="checkout()">Place Order</button>
+    </div>
+  </div>
+
+  <!-- Auth Modal -->
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="toggleAuthModal()">&times;</span>
+      <h3 id="authTitle">Login</h3>
+      <div class="form-group" id="nameGroup" style="display:none;">
+        <label>Name</label>
+        <input type="text" id="authName" placeholder="Enter name">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="authEmail" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="authPassword" placeholder="Enter password">
+      </div>
+      <button class="primary-btn" id="submitAuthBtn" onclick="handleAuth()">Login</button>
+      <p style="margin-top:10px; cursor:pointer; color:#0066cc;" onclick="switchAuthMode()" id="switchText">Don't have an account? Register</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
