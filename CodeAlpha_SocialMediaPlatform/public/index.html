@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConnectHub - CodeAlpha Social Media</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">ConnectHub</div>
+    <div class="user-pill">
+      <span id="navUsername">@bharath_dev</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Sidebar / Profile -->
+    <aside class="profile-card">
+      <div class="avatar" id="profileInitials">B</div>
+      <h3 id="profileName">Loading...</h3>
+      <div class="handle" id="profileHandle">@...</div>
+      <p class="bio" id="profileBio">...</p>
+      <div class="stats">
+        <div><strong>Followers:</strong> <span id="followersCount">0</span></div>
+      </div>
+      <button class="follow-btn" onclick="followUser()">+ Follow Profile</button>
+    </aside>
+
+    <!-- Main Feed -->
+    <main class="feed">
+      <!-- Create Post Box -->
+      <div class="create-post-card">
+        <h4>Create a Post</h4>
+        <textarea id="postInput" placeholder="What is on your mind? Share an update..."></textarea>
+        <button class="primary-btn" onclick="submitPost()">Post Update</button>
+      </div>
+
+      <!-- Feed Container -->
+      <div id="postsFeed"></div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

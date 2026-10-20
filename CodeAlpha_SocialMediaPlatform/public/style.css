@@ -1,0 +1,31 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+body { background: #f1f5f9; color: #1e293b; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 14px 28px; background: white; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 10; }
+.logo { font-size: 20px; font-weight: 700; color: #6366f1; }
+.user-pill { background: #e0e7ff; color: #4338ca; padding: 6px 12px; border-radius: 20px; font-weight: 600; font-size: 13px; }
+.container { display: grid; grid-template-columns: 280px 1fr; gap: 24px; max-width: 960px; margin: 24px auto; padding: 0 16px; }
+.profile-card { background: white; border-radius: 8px; border: 1px solid #e2e8f0; padding: 20px; text-align: center; height: fit-content; }
+.avatar { width: 64px; height: 64px; border-radius: 50%; background: #6366f1; color: white; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; margin: 0 auto 12px; }
+.handle { color: #64748b; font-size: 13px; margin-bottom: 8px; }
+.bio { font-size: 14px; color: #334155; margin-bottom: 16px; line-height: 1.4; }
+.stats { margin-bottom: 16px; font-size: 14px; }
+.follow-btn { width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #6366f1; background: #eef2ff; color: #4f46e5; font-weight: 600; cursor: pointer; }
+.follow-btn:hover { background: #e0e7ff; }
+.create-post-card { background: white; border-radius: 8px; border: 1px solid #e2e8f0; padding: 16px; margin-bottom: 20px; }
+.create-post-card textarea { width: 100%; height: 75px; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; resize: none; margin-top: 8px; font-size: 14px; }
+.primary-btn { margin-top: 10px; padding: 8px 16px; background: #6366f1; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; }
+.primary-btn:hover { background: #4f46e5; }
+.post-card { background: white; border-radius: 8px; border: 1px solid #e2e8f0; padding: 16px; margin-bottom: 16px; }
+.post-header { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 13px; color: #64748b; }
+.post-author { font-weight: 700; color: #0f172a; font-size: 15px; }
+.post-body { font-size: 15px; line-height: 1.5; margin-bottom: 12px; }
+.post-actions { display: flex; gap: 12px; border-top: 1px solid #f1f5f9; padding-top: 10px; }
+.action-btn { background: none; border: none; cursor: pointer; color: #64748b; font-size: 13px; font-weight: 600; }
+.action-btn:hover { color: #6366f1; }
+.comments-section { margin-top: 12px; background: #f8fafc; border-radius: 6px; padding: 10px; }
+.comment { font-size: 13px; margin-bottom: 6px; }
+.comment strong { color: #334155; }
+.comment-input-box { display: flex; gap: 8px; margin-top: 8px; }
+.comment-input-box input { flex: 1; padding: 6px 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 13px; }
+.comment-input-box button { padding: 6px 12px; background: #6366f1; color: white; border: none; border-radius: 4px; font-size: 13px; cursor: pointer; }
+@media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
